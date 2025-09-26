@@ -1,3 +1,0 @@
-- [x] Update image paths in src/data/projects.json to use public folder paths (/images/Project1.png, etc.)
-- [x] Test images display locally by running dev server
-- [ ] Commit and push changes for Vercel redeploy
