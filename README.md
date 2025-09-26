@@ -28,6 +28,7 @@ A modern, responsive personal portfolio website for Chiamaka Igbokwe (Amaka), sh
 - Zod (form validation)
 - Sonner (toast notifications)
 - Next Themes (theme management)
+- TanStack Query (for data fetching and state management)
 - Custom hooks and utilities for mobile detection and toasts
 
 ## Getting Started
@@ -70,6 +71,14 @@ This generates optimized static files in the `dist/` directory.
 ```bash
 npm run preview
 ```
+
+## Available Scripts
+
+- `npm run dev`: Starts the development server at `http://localhost:5173`.
+- `npm run build`: Builds the application for production, outputting to the `dist/` directory.
+- `npm run build:dev`: Builds the application in development mode.
+- `npm run lint`: Runs ESLint to check for code issues.
+- `npm run preview`: Serves the production build locally for preview.
 
 ## Project Structure
 
