@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MessageCircle, X, Send, Bot, User, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import chatbotKnowledge from "@/data/chatbot-knowledge.json";
 
 interface Message {
   id: string;
@@ -33,47 +34,69 @@ const AIChatbot = () => {
     scrollToBottom();
   }, [messages]);
 
-  const aboutMeKnowledge = {
-    experience: "5+ years of frontend development experience, specializing in React, TypeScript, and modern web technologies.",
-    skills: "Expert in React, TypeScript, Next.js, Tailwind CSS, Node.js, and modern development tools like Docker and Kubernetes.",
-    projects: "Built e-commerce platforms, AI-powered dashboards, and collaborative design tools with focus on performance and user experience.",
-    background: "Computer Science graduate from Stanford University, currently working as Senior Frontend Developer at TechCorp Solutions.",
-    interests: "Passionate about AI integration in web development, performance optimization, and creating accessible user interfaces.",
-    location: "Based in San Francisco, CA, open to remote opportunities.",
-    education: "Bachelor of Science in Computer Science from Stanford University (2015-2019), graduated Summa Cum Laude.",
-    certifications: "AWS Certified Developer, Google UX Design Professional Certificate, Meta Frontend Developer Certificate.",
-  };
-
   const generateAIResponse = async (userMessage: string): Promise<string> => {
     // Simulate AI processing time
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
 
     const message = userMessage.toLowerCase();
-    
+
     if (message.includes("experience") || message.includes("work")) {
-      return aboutMeKnowledge.experience + " I've worked at companies ranging from startups to established tech firms, leading frontend development projects and mentoring junior developers.";
+      return chatbotKnowledge.aboutMe.experience + " I've worked at companies ranging from startups to established tech firms, leading frontend development projects and mentoring junior developers.";
     }
-    
+
     if (message.includes("skill") || message.includes("technology") || message.includes("tech")) {
-      return aboutMeKnowledge.skills + " I'm always learning new technologies and staying up-to-date with the latest frontend development trends.";
+      const categories = chatbotKnowledge.skills.categories.map(s => `${s.title}: ${s.description}`).join('\n');
+      const tech = `Tech Stack: ${chatbotKnowledge.skills.techStack.join(', ')}`;
+      return `${chatbotKnowledge.aboutMe.skills}\n\nSkill Categories:\n${categories}\n\n${tech}`;
     }
-    
+
     if (message.includes("project") || message.includes("portfolio")) {
-      return aboutMeKnowledge.projects + " Each project taught me valuable lessons about scalability, user experience, and modern development practices.";
+      const projectList = chatbotKnowledge.projects.map(p => `${p.title}: ${p.description}`).join('\n');
+      return `Here are my projects:\n${projectList}\n\nAsk about a specific project for more details!`;
     }
-    
-    if (message.includes("education") || message.includes("university") || message.includes("study")) {
-      return aboutMeKnowledge.education + " During my studies, I was actively involved in computer science clubs and published research on web accessibility.";
+
+    // Specific projects
+    if (message.includes("travel") && message.includes("ai")) {
+      const project = chatbotKnowledge.projects.find(p => p.title.toLowerCase().includes("ai-travel"));
+      if (project) {
+        return `About ${project.title}: ${project.description}\nTechnologies: ${project.technologies.join(', ')}\nChallenges: ${project.challenges.join(' ')}\nSolutions: ${project.solutions.join(' ')}\nLive: ${project.liveUrl}\nGitHub: ${project.githubUrl}`;
+      }
     }
-    
+
+    if (message.includes("mibes") || message.includes("travel") && message.includes("tour")) {
+      const project = chatbotKnowledge.projects.find(p => p.title.toLowerCase().includes("mibes"));
+      if (project) {
+        return `About ${project.title}: ${project.description}\nTechnologies: ${project.technologies.join(', ')}\nChallenges: ${project.challenges.join(' ')}\nSolutions: ${project.solutions.join(' ')}\nLive: ${project.liveUrl}`;
+      }
+    }
+
+    if (message.includes("recipe") || message.includes("finder")) {
+      const project = chatbotKnowledge.projects.find(p => p.title.toLowerCase().includes("recipe"));
+      if (project) {
+        return `About ${project.title}: ${project.description}\nTechnologies: ${project.technologies.join(', ')}\nChallenges: ${project.challenges.join(' ')}\nSolutions: ${project.solutions.join(' ')}\nLive: ${project.liveUrl}\nGitHub: ${project.githubUrl}`;
+      }
+    }
+
     if (message.includes("location") || message.includes("where")) {
-      return aboutMeKnowledge.location + " I enjoy the tech scene in San Francisco but I'm also experienced with remote collaboration.";
+      return chatbotKnowledge.aboutMe.location + " I enjoy the tech scene in Lagos but I'm also experienced with remote collaboration.";
     }
-    
+
+    if (message.includes("background") || message.includes("education")) {
+      return chatbotKnowledge.aboutMe.background;
+    }
+
+    if (message.includes("interest") || message.includes("passion")) {
+      return chatbotKnowledge.aboutMe.interests;
+    }
+
+    if (message.includes("certification") || message.includes("certificate")) {
+      return chatbotKnowledge.aboutMe.certifications;
+    }
+
     if (message.includes("contact") || message.includes("hire") || message.includes("work together")) {
       return "I'm always interested in exciting new opportunities! You can reach me at john.developer@email.com or connect with me on LinkedIn. I'd love to discuss how I can contribute to your team or project.";
     }
-    
+
     if (message.includes("ai") || message.includes("artificial intelligence")) {
       return "I'm fascinated by AI integration in web development! I've worked on AI-powered dashboards and I'm always exploring how AI can enhance user experiences and development workflows.";
     }
@@ -81,7 +104,11 @@ const AIChatbot = () => {
     if (message.includes("hello") || message.includes("hi") || message.includes("hey")) {
       return "Hello! I'm here to help you learn more about this developer. Feel free to ask about their experience, skills, projects, or anything else you'd like to know!";
     }
-    
+
+    if (message.includes("name") || message.includes("who are you") || message.includes("your name") || message.includes("what's your name")) {
+      return `The developer's name is ${chatbotKnowledge.aboutMe.name}. I'm here to help you learn more about their experience, skills, projects, and background.`;
+    }
+
     // Default response for unrecognized queries
     return "That's a great question! I can tell you about the developer's experience, technical skills, education, projects, or how to get in touch. What specific aspect would you like to know more about?";
   };

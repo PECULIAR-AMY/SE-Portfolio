@@ -1,0 +1,102 @@
+{
+  "aboutMe": {
+    "name": "Igbokwe Chiamaka peculiar",
+    "experience": "2 years of frontend development experience, specializing in React, TypeScript, and modern web technologies.",
+    "skills": "Expert in React, TypeScript, Next.js, Tailwind CSS, Node.js and modern development tools like Docker and Kubernetes.",
+    "projects": "Built Ai-powered Travel Assistant, Mibes Travel and Tour platform, and A recipe Finder App.",
+    "background": "Microbiology graduate from Federal University of Technology Minna, Niger State Nigeria. Beyond tech, I'm a serial entrepreneur.",
+    "interests": "Passionate about AI integration in web development, performance optimization, and creating accessible user interfaces.",
+    "location": "Based in Lagos Nigeria and open to remote opportunities.",
+    "certifications": "Alx Frontend Certified Developer, Alx AI certificate"
+  },
+  "projects": [
+    {
+      "title": "Ai-Travel Assistant",
+      "description": "A smart Ai powered Assistant for smart travel recommendations like Hotels, Flights, tour Recommendation based on Customer Budget.",
+      "technologies": ["React", "TypeScript", "Paystack", "Css", "Tailwind css", "Caching", "OpenAI Api"],
+      "challenges": [
+        "My biggest challenge building the AI travel assistant was getting smart suggestions to work seamlessly with OpenAI, setting up a proxy server to fetch data securely and integrating Paystack test payments."
+      ],
+      "solutions": [
+        "I tackled this by breaking things down using a proxy server to handle API calls safely, refining prompts for better AI responses and running multiple test cycles on Paystack until payments flowed smoothly."
+      ],
+      "liveUrl": "https://ai-travel-assistant-nine.vercel.app/",
+      "githubUrl": "https://github.com/PECULIAR-AMY/AI-Travel-Assistant-"
+    },
+    {
+      "title": "Mibes Travel and Tour",
+      "description": "Its a hospitality and Travel website that helps help you book travels from Ghana to Ghana and also from Ghana to different parts of the world.",
+      "technologies": ["React", "Tailwind css", "shadcn/ui", "Redux", "APi"],
+      "challenges": [
+        "Arriving at the exact design on the figma",
+        "Performance optimization.",
+        "Adapting to strict and tight deadlines.",
+        "Team Collaborations."
+      ],
+      "solutions": [
+        "Broke designs into reusable components, used Tailwind for pixel-perfect styling, and cross-checked every detail with Figma.",
+        "Implemented lazy loading, code splitting and caching strategies to speed up load time.",
+        "Prioritized core features first then iterated on enhancements and used task breakdowns for focus.",
+        "Used Git branching, PR reviews and regular standups for alignment."
+      ],
+      "liveUrl": "https://mibestours.com"
+    },
+    {
+      "title": "Recipe Finder Application",
+      "description": "This is a recipe finder application that help find meals based on recipe, make smart suggestions and direct you to a youtube video for better cook experience with that recipe.",
+      "technologies": ["React", "TheMealDB API", "Tailwind css", "Context Api", "Vite"],
+      "challenges": [
+        "Search Optimizations, Rerenders and Keystroke issues",
+        "Handling Cart and state management",
+        "Responsive design layout",
+        "Handling Api calls"
+      ],
+      "solutions": [
+        "Used debounce on search input and memoization (useMemo, useCallback) to prevent unnecessary rerenders.",
+        "Integrated Context Api for predictable state handling (adding, removing, updating items).",
+        "Built with Tailwind CSS grid & flex utilities; tested across devices.",
+        "Implemented React Query for caching, refetching and managing server state."
+      ],
+      "liveUrl": "https://recipe-finder-kappa-taupe.vercel.app/",
+      "githubUrl": "https://github.com/PECULIAR-AMY/Alx-capstone-project/blob/main/README.md#alx-capstone-project"
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "icon": "Code2",
+        "title": "Frontend Development",
+        "description": "Expert in React, TypeScript, and modern JavaScript frameworks with focus on performance and accessibility."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Security",
+        "description": "I'm well-versed in frontend security, applying CSP and X-Frame-Options to protect against threats while ensuring every project is both seamless and secure."
+      },
+      {
+        "icon": "Rocket",
+        "title": "Performance Optimization",
+        "description": "Optimizing applications for speed, SEO, and user engagement using modern development practices."
+      },
+      {
+        "icon": "Users",
+        "title": "Team Collaboration",
+        "description": "Strong communication skills and experience working in agile development environments."
+      }
+    ],
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "css",
+      "Redux",
+      "Framer Motion",
+      "Webpack",
+      "Vite",
+      "Jest",
+      "Cypress"
+    ]
+  }
+}

@@ -26,15 +26,9 @@ const Footer = () => {
               <a href="#projects" className="text-background/70 hover:text-background transition-colors">
                 Projects
               </a>
-              <a href="#blog" className="text-background/70 hover:text-background transition-colors">
-                Blog
-              </a>
-              <a href="#cv" className="text-background/70 hover:text-background transition-colors">
-                CV
-              </a>
-              <a href="#contact" className="text-background/70 hover:text-background transition-colors">
-                Contact
-              </a>
+            <a href="#contact" className="text-background/70 hover:text-background transition-colors">
+              Contact
+            </a>
             </nav>
           </div>
 
@@ -42,8 +36,8 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Connect</h4>
             <div className="space-y-2">
-              <p className="text-background/70">john.developer@email.com</p>
-              <p className="text-background/70">San Francisco, CA</p>
+              <p className="text-background/70">emmanuelpeculiar645@gmail.com</p>
+              <p className="text-background/70">Lagos, Nigeria</p>
             </div>
             <div className="flex gap-4 pt-2">
               <a

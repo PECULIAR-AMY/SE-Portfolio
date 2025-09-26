@@ -1,0 +1,38 @@
+{
+  "skills": [
+    {
+      "icon": "Code2",
+      "title": "Frontend Development",
+      "description": "Expert in React, TypeScript, and modern JavaScript frameworks with focus on performance and accessibility."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Security",
+      "description": "I'm well-versed in frontend security, applying CSP and X-Frame-Options to protect against threats while ensuring every project is both seamless and secure."
+    },
+    {
+      "icon": "Rocket",
+      "title": "Performance Optimization",
+      "description": "Optimizing applications for speed, SEO, and user engagement using modern development practices."
+    },
+    {
+      "icon": "Users",
+      "title": "Team Collaboration",
+      "description": "Strong communication skills and experience working in agile development environments."
+    }
+  ],
+  "techStack": [
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Tailwind CSS",
+    "Node.js",
+    "css",
+    "Redux",
+    "Framer Motion",
+    "Webpack",
+    "Vite",
+    "Jest",
+    "Cypress"
+  ]
+}

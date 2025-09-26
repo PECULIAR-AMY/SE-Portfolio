@@ -1,63 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Lightbulb, Wrench } from "lucide-react";
+import projects from "../data/projects.json";
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "A full-featured e-commerce platform built with React and TypeScript, featuring real-time inventory management and secure payment processing.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "TypeScript", "Stripe", "Node.js", "MongoDB"],
-      challenges: [
-        "Implementing real-time inventory updates across multiple users",
-        "Optimizing performance for large product catalogs",
-        "Ensuring PCI compliance for payment processing"
-      ],
-      solutions: [
-        "Used WebSocket connections for real-time updates with optimistic UI",
-        "Implemented virtual scrolling and lazy loading for catalog performance",
-        "Integrated Stripe's secure payment infrastructure with tokenization"
-      ],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "AI-Powered Dashboard",
-      description: "Analytics dashboard with AI-driven insights, featuring interactive charts, predictive analytics, and automated report generation.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Next.js", "D3.js", "Python", "TensorFlow", "PostgreSQL"],
-      challenges: [
-        "Processing and visualizing large datasets efficiently",
-        "Creating intuitive AI insight explanations",
-        "Maintaining responsive performance with complex animations"
-      ],
-      solutions: [
-        "Implemented data virtualization and progressive loading strategies",
-        "Designed clear visual indicators and explanatory tooltips for AI insights",
-        "Used Canvas-based rendering for smooth 60fps chart animations"
-      ],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Collaborative Design Tool",
-      description: "Real-time collaborative design platform allowing teams to create, edit, and review designs together with version control and commenting.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "WebRTC", "Socket.io", "Canvas API", "Redis"],
-      challenges: [
-        "Synchronizing real-time collaborative editing",
-        "Handling complex canvas operations and state management",
-        "Implementing conflict resolution for simultaneous edits"
-      ],
-      solutions: [
-        "Built operational transformation system for conflict-free collaboration",
-        "Created efficient canvas state management with command pattern",
-        "Implemented last-write-wins with visual conflict indicators"
-      ],
-      liveUrl: "#",
-      githubUrl: "#"
-    }
-  ];
 
   return (
     <section id="projects" className="section-padding">
@@ -149,14 +94,20 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-4">
-                  <Button variant="hero" className="gap-2">
-                    <ExternalLink className="h-4 w-4" />
-                    Live Demo
-                  </Button>
-                  <Button variant="elegant" className="gap-2">
-                    <Github className="h-4 w-4" />
-                    Source Code
-                  </Button>
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <Button variant="hero" className="gap-2">
+                      <ExternalLink className="h-4 w-4" />
+                      Live Demo
+                    </Button>
+                  </a>
+                  {project.githubUrl && (
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Button variant="elegant" className="gap-2">
+                        <Github className="h-4 w-4" />
+                        Source Code
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

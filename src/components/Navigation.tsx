@@ -19,8 +19,6 @@ const Navigation = () => {
   const navLinks = [
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
-    { href: "#blog", label: "Blog" },
-    { href: "#cv", label: "CV" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -54,14 +52,7 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* AI Chat Button */}
-          <div className="hidden md:block">
-            <Button variant="glow" size="sm" className="gap-2">
-              <MessageCircle className="h-4 w-4" />
-              AI Assistant
-            </Button>
-          </div>
-
+       
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"

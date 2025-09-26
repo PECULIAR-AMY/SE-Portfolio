@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
-import developerHeadshot from "@/assets/developer-headshot.jpg";
+import developerHeadshot from "@/assets/peculiar.jpg";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="section-padding min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-secondary/30 to-background">
       <div className="container mx-auto max-w-6xl">
@@ -17,29 +23,35 @@ const Hero = () => {
                 Developer
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                Crafting beautiful, responsive web experiences with modern technologies. 
-                Passionate about clean code, user experience, and bringing ideas to life.
+               Passionate about bringing ideas to life with clean, user-friendly interfaces. With a strong background in sales, I've learned to always keep people at the heart of what I build. That means I don't just write code but I craft experiences that solve real customer pain points, making interactions seamless and intuitive.
+               Every project I take on is about more than design or functionality but about helping businesses grow by creating products their users genuinely enjoy using.
               </p>
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="hover-lift">
+              <Button variant="hero" size="lg" className="hover-lift" onClick={scrollToContact}>
                 <Mail className="h-5 w-5" />
                 Get In Touch
               </Button>
               <Button variant="elegant" size="lg" className="hover-lift">
                 <Download className="h-5 w-5" />
-                Download CV
+                <a href="/path/to/your-cv.pdf" download className="ml-2">
+                  Download cv
+                </a>
               </Button>
             </div>
             
             <div className="flex gap-4 pt-4">
-              <Button variant="ghost" size="icon" className="hover-glow rounded-full">
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover-glow rounded-full">
-                <Linkedin className="h-5 w-5" />
-              </Button>
+              <a href="https://github.com/PECULIAR-AMY" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="hover-glow rounded-full">
+                  <Github className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://www.linkedin.com/in/chiamaka-igbokwe/" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="hover-glow rounded-full">
+                  <Linkedin className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
           
