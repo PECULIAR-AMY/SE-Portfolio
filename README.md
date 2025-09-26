@@ -133,4 +133,3 @@ Contributions are welcome! Please feel free to submit issues for bugs or enhance
 
 ## License
 
-This project is private and not open-source.

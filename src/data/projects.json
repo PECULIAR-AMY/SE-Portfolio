@@ -2,7 +2,7 @@
     {
     "title": "Ai-Travel Assistant",
     "description": "A smart Ai powered Assistant for smart travel recommendations like Hotels, Fligts, tour Recommendation based on Customer Budget.",
-    "image": "src/assets/Screenshot 2025-09-23 135555.png",
+    "image": "/images/Project1.png",
     "technologies": ["React", "TypeScript", "Payststack", "Css", "Tailwind css","Caching", "OpenAI Api"],
     "challenges": [
       "My biggest challenge building the AI travel assistant was getting smart suggestions to work seamlessly with OpenAI, setting up a proxy server to fetch data securely and integrating Paystack test payments."
@@ -16,7 +16,7 @@
   {
     "title": "Mibes Travel and Tour",
     "description": "Its a hospitality and Travel website that helps help you book travels from Ghana to Ghana and also from Ghana to different parts of the world.",
-    "image": "src/assets/Screenshot 2025-09-24 152906.png",
+    "image": "/images/Project2.png",
     "technologies": ["React", "Tailwind css", "shadcn/ui", "Redux", "APi"],
     "challenges": [
       "Arriving at the exact design on the figma",
@@ -35,7 +35,7 @@
   {
     "title": "Recipe Finder Application ",
     "description": "This is a recipe finder application that help find meals based on recipe, make smart suggestions and direct you to a youtube video for better cook experience with that recipe.",
-    "image": "src/assets/Screenshot 2025-03-27 093902.png",
+    "image": "/images/Project3.png",
     "technologies": ["React", "TheMealDB API", "Tailwind css", "Context Api", "Vite"],
     "challenges": [
       "Search Optimizations, Rerenders and Keystroke issues",
