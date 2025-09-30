@@ -1,6 +1,6 @@
 # Amaka Portfolio
 
-A modern, responsive personal portfolio website for Chiamaka Igbokwe (Amaka), showcasing frontend development expertise with React, TypeScript, and modern web technologies. Features an interactive AI Chatbot for enhanced user engagement.
+A modern, responsive personal portfolio website for Chiamaka Igbokwe showcasing frontend development expertise with React, TypeScript, and modern web technologies. Features an interactive AI Chatbot for enhanced user engagement.
 
 ## Features
 
