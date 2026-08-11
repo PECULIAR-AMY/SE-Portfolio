@@ -18,7 +18,7 @@ const Hero = () => {
             <div className="space-y-4">
               <p className="text-muted-foreground text-lg font-medium">Hello, I'm</p>
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="gradient-text">Frontend</span>
+                <span className="gradient-text"></span>
                 <br />
                 Developer
               </h1>
