@@ -18,13 +18,11 @@ const Hero = () => {
             <div className="space-y-4">
               <p className="text-muted-foreground text-lg font-medium">Hello, I'm</p>
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="gradient-text"></span>
+                <span className="gradient-text">Sales Engineer / Software Engineer</span>
                 <br />
-                Developer
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-               Passionate about bringing ideas to life with clean, user-friendly interfaces. With a strong background in sales, I've learned to always keep people at the heart of what I build. That means I don't just write code but I craft experiences that solve real customer pain points, making interactions seamless and intuitive.
-               Every project I take on is about more than design or functionality but about helping businesses grow by creating products their users genuinely enjoy using.
+              I combine software engineering expertise with customer-focused communication to understand customer needs, translate business problems into technical solutions and communicate the value of technology to technical and non-technical stakeholders.
               </p>
             </div>
             

@@ -1,14 +1,25 @@
-import { Code2, Rocket, ShieldCheck, Users } from "lucide-react";
+import {
+  Code2,
+  PlugZap,
+  Workflow,
+  ShieldCheck,
+  Handshake,
+  UsersRound,
+  Wrench,
+} from "lucide-react";
 import data from "@/data/skills.json";
 
 const About = () => {
-  const { skills, techStack } = data;
+  const { skills } = data;
 
   const iconMap = {
     Code2,
+    PlugZap,
+    Workflow,
     ShieldCheck,
-    Rocket,
-    Users,
+    Handshake,
+    UsersRound,
+    Wrench,
   };
 
   return (
@@ -19,9 +30,9 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate frontend developer with 2 years of experience creating 
-            exceptional digital experiences. I love turning complex problems into 
-            simple, beautiful solutions that users enjoy.
+            I’m a software engineer transitioning into Sales Engineering, combining hands-on software development experience with a strong customer and business focus. I enjoy understanding customer problems, translating technical challenges and requirements into practical solutions and connecting technology to measurable business outcomes. I help people understand not just how a solution works but why it matters to their business.
+
+I’m strongest at customer discovery, requirements gathering, solution design, solution architecture, technical communication and product demonstrations. I enjoy working with both technical and non-technical stakeholders, translating complex concepts into clear language and connecting customer needs with solutions that create real measurable value.
           </p>
         </div>
 
@@ -45,22 +56,6 @@ const About = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* Technologies */}
-        <div className="text-center animate-fade-in">
-          <h3 className="text-2xl font-semibold mb-8">Skills/Tech Stack</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {techStack.map((tech, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-card border border-border/50 rounded-full text-sm font-medium hover-lift"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>
