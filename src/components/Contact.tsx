@@ -60,18 +60,18 @@ const Contact = () => {
     <section id="contact" className="section-padding bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-8 md:mb-10 animate-fade-in">
+          <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold mb-4 md:mb-6">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[15px] sm:text-[17px] text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to work together? I'd love to hear about your project and
             discuss how I can help bring your ideas to life. Let's create
             something amazing!
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
           {/* Contact Info */}
           <div className="space-y-8 animate-fade-in">
             <div className="card-elegant p-6">
@@ -96,7 +96,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-sm text-muted-foreground">Lagos, Nigeria</p>
+                    <p className="text-sm text-muted-foreground">, Nigeria</p>
                   </div>
                 </div>
               </div>
