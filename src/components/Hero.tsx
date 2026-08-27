@@ -17,8 +17,8 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <p className="text-muted-foreground text-base sm:text-lg font-medium">Hello, I'm Chiamaka peculiar</p>
-              <h1 className="text-[32px] sm:text-[44px] lg:text-[60px] font-bold leading-tight">
-                <span className="gradient-text">Sales Engineer / Software Engineer</span>
+              <h1 className="text-[32px] sm:text-[44px] lg:text-[32px] font-bold leading-tight">
+                <span className="gradient-text">Sales Engineer / Solution Engineer / Software Engineer</span>
               </h1>
               <p className="text-[15px] sm:text-[17px] text-muted-foreground max-w-lg leading-relaxed">
               I combine software engineering expertise with customer-focused communication to understand customer needs, translate business problems into technical solutions and communicate the value of technology to technical and non-technical stakeholders.

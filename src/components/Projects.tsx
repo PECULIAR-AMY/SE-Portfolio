@@ -18,7 +18,7 @@ const Projects = () => {
         {/* Header */}
         <div className="mb-8 md:mb-10 animate-fade-in text-left">
           <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold mb-4 md:mb-6">
-            Featured <span className="gradient-text">Solutions</span>
+            Featured <span className="gradient-text">Solutions and Demo</span> 
           </h2>
           <div className="text-[15px] sm:text-[17px] text-muted-foreground max-w-3xl leading-relaxed space-y-3 sm:space-y-4">
             <p>
