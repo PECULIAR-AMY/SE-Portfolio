@@ -21,23 +21,29 @@ const Hero = () => {
                 <span className="gradient-text">Sales Engineer / Solution Engineer / Software Engineer</span>
               </h1>
               <p className="text-[15px] sm:text-[17px] text-muted-foreground max-w-lg leading-relaxed">
-              I combine software engineering expertise with customer-focused communication to understand customer needs, translate business problems into technical solutions and communicate the value of technology to technical and non-technical stakeholders.
+                I combine software engineering expertise with customer-focused communication to understand customer needs, translate business problems into technical solutions and communicate the value of technology to technical and non-technical stakeholders.
               </p>
             </div>
-            
+
             <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="lg" className="hover-lift" onClick={scrollToContact}>
                 <Mail className="h-5 w-5" />
                 Get In Touch
               </Button>
-              <Button variant="elegant" size="lg" className="hover-lift">
-                <Download className="h-5 w-5" />
-                <a href="/path/to/your-cv.pdf" download className="ml-2">
-                  Download cv
+              <Button variant="elegant" size="lg" className="hover-lift" asChild>
+                <a href="/public/Sales Engineer CV.pdf" download className="flex items-center gap-2">
+                  <Download className="h-5 w-5" />
+                  CV (Sales Engineer)
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="hover-lift" asChild>
+                <a href="/public/Chiamaka Peculiar Solutions Engineer CV.pdf" download className="flex items-center gap-2">
+                  <Download className="h-5 w-5" />
+                  CV (Solution Engineer)
                 </a>
               </Button>
             </div>
-            
+
             <div className="flex gap-4 pt-4">
               <a href="https://github.com/PECULIAR-AMY" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="hover-glow rounded-full">
@@ -51,7 +57,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          
+
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end animate-fade-in-delay">
             <div className="relative">
