@@ -59,7 +59,7 @@ const Hero = () => {
               <div className="relative bg-gradient-to-br from-card to-secondary/30 p-2 rounded-3xl shadow-2xl">
                 <img
                   src={developerHeadshot}
-                  alt="Frontend Developer"
+                  alt="Chiamaka Peculiar"
                   className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl"
                 />
               </div>

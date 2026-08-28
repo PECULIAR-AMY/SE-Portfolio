@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold gradient-text">Frontend Developer</h3>
+            <h3 className="text-2xl font-bold gradient-text">Chiamaka Peculiar</h3>
             <p className="text-background/70 leading-relaxed">
-              Crafting beautiful, responsive web experiences with modern technologies. 
-              Let's build something amazing together.
+              Bridging technology and business to deliver practical, scalable solutions that solve real customer challenges.
+              Let’s turn complex technical needs into solutions that drive meaningful results.
             </p>
           </div>
 
@@ -26,9 +26,9 @@ const Footer = () => {
               <a href="#projects" className="text-background/70 hover:text-background transition-colors">
                 Projects
               </a>
-            <a href="#contact" className="text-background/70 hover:text-background transition-colors">
-              Contact
-            </a>
+              <a href="#contact" className="text-background/70 hover:text-background transition-colors">
+                Contact
+              </a>
             </nav>
           </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
             <div className="flex gap-4 pt-2">
               <a
-                href="https://github.com"
+                href="https://github.com/PECULIAR-AMY"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center text-background/70 hover:text-background hover:bg-background/20 transition-all duration-300"
@@ -49,7 +49,7 @@ const Footer = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/chiamaka-igbokwe/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center text-background/70 hover:text-background hover:bg-background/20 transition-all duration-300"
@@ -57,7 +57,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:john.developer@email.com"
+                href="mailto:emmanuelpeculiar645@gmail.com"
                 className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center text-background/70 hover:text-background hover:bg-background/20 transition-all duration-300"
               >
                 <Mail className="h-5 w-5" />
@@ -68,7 +68,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-background/70 text-sm mb-4 md:mb-0">
-            © {currentYear} Frontend Developer Portfolio. All rights reserved.
+            © {currentYear} Chiamaka Peculiar. All rights reserved.
           </p>
           <p className="text-background/70 text-sm flex items-center gap-1">
             Made with <Heart className="h-4 w-4 text-red-400" /> using React & TypeScript
