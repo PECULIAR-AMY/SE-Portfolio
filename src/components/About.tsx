@@ -23,14 +23,14 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="section-padding bg-secondary/30">
+    <section id="about" className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-secondary/30">
       <div className="container mx-auto max-w-6xl">
         <div className="mb-8 md:mb-10 animate-fade-in">
           <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold mb-4 md:mb-6">
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-[15px] sm:text-[17px] text-muted-foreground max-w-3xl leading-relaxed text-left">
-            I’m a software engineer transitioning into Sales Engineering, combining hands-on software development experience with a strong customer and business focus. I enjoy understanding customer problems, translating technical challenges and requirements into practical solutions and connecting technology to measurable business outcomes. I help people understand not just how a solution works but why it matters to their business. I’m strongest at customer discovery, requirements gathering, solution design, solution architecture, technical communication and product demonstrations. I enjoy working with both technical and non-technical stakeholders, translating complex concepts into clear language and connecting customer needs with solutions that create real measurable value.
+            I’m a software engineer transitioning into Sales Engineering and Solutions Engineering, bringing hands-on development experience and a customer-focused, business-driven approach. I enjoy understanding customer needs, translating business and technical requirements into practical solutions and communicating their value clearly. With a foundation in solution design, technical problem-solving, architecture and product demonstrations, I bridge the gap between technology and business helping technical and non-technical stakeholders understand how solutions address real challenges and deliver value.
           </p>
         </div>
 

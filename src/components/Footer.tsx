@@ -37,7 +37,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Connect</h4>
             <div className="space-y-2">
               <p className="text-background/70">emmanuelpeculiar645@gmail.com</p>
-              <p className="text-background/70">Lagos, Nigeria</p>
+              <p className="text-background/70">Abuja, Nigeria</p>
             </div>
             <div className="flex gap-4 pt-2">
               <a

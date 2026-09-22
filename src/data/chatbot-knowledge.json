@@ -11,36 +11,74 @@
   },
   "projects": [
     {
-      "title": "Ai-Travel Assistant",
-      "description": "A smart Ai powered Assistant for smart travel recommendations like Hotels, Flights, tour Recommendation based on Customer Budget.",
-      "technologies": ["React", "TypeScript", "Paystack", "Css", "Tailwind css", "Caching", "OpenAI Api"],
+      "title": "AI Travel Assistant",
+      "description": "An AI-powered travel-planning application that helps users explore travel options based on preferences and budget. Features an AI chat experience, travel recommendation workflows (mock data), and a Paystack test payment checkout flow (sandbox mode).",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vite",
+        "AI Integration",
+        "Paystack Test Integration"
+      ],
       "challenges": [
-        "My biggest challenge building the AI travel assistant was getting smart suggestions to work seamlessly with OpenAI, setting up a proxy server to fetch data securely and integrating Paystack test payments."
+        "Designing stateful AI chat interactions for travel planning.",
+        "Delegating API calls through an application/proxy layer to manage sensitive credentials.",
+        "Integrating Paystack sandbox test mode for payment workflow demonstration."
       ],
       "solutions": [
-        "I tackled this by breaking things down using a proxy server to handle API calls safely, refining prompts for better AI responses and running multiple test cycles on Paystack until payments flowed smoothly."
+        "Structured conversational prompt workflows to keep recommendations relevant.",
+        "Decoupled UI from third-party services using an application proxy configuration.",
+        "Validated Paystack test sandbox callback handling for checkout demonstration."
       ],
-      "liveUrl": "https://ai-travel-assistant-nine.vercel.app/",
+      "demos": {
+        "demoVideo": {
+          "title": "Demo Video",
+          "focus": "Customer problem alignment, preference gathering, AI chat walkthrough, recommendation discovery, Paystack test checkout, and technical-to-business value.",
+          "url": "https://youtu.be/XbCb4qiRnBk"
+        }
+      },
       "githubUrl": "https://github.com/PECULIAR-AMY/AI-Travel-Assistant-"
     },
     {
       "title": "Recipe Finder Application",
-      "description": "This is a recipe finder application that help find meals based on recipe, make smart suggestions and direct you to a youtube video for better cook experience with that recipe.",
-      "technologies": ["React", "TheMealDB API", "Tailwind css", "Context Api", "Vite"],
+      "description": "An API-driven recipe discovery & cloud deployment solution demonstrating both Sales Engineering and Solutions Engineering. Features React/TypeScript, TheMealDB REST API integration, React Query caching, Context API, Docker multi-stage build, and AWS deployment workflow (Amazon ECR, Amazon EC2, Linux (Ubuntu)). Includes dual demos: Sales Engineer Demo and Solutions Engineer Demo.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "TheMealDB API",
+        "React Query",
+        "Context API",
+        "Docker",
+        "Nginx",
+        "AWS ECR",
+        "AWS EC2",
+        "Linux (Ubuntu)"
+      ],
       "challenges": [
-        "Search Optimizations, Rerenders and Keystroke issues",
-        "Handling Cart and state management",
-        "Responsive design layout",
-        "Handling Api calls"
+        "Handling frequent search input and API request optimization without unnecessary network calls or component re-renders.",
+        "Containerizing the React SPA into a multi-stage Docker image with Nginx runtime for production deployment.",
+        "Navigating Linux (Ubuntu), SSH, AWS ECR image tagging/pushing, and EC2 container deployment workflows."
       ],
       "solutions": [
-        "Used debounce on search input and memoization (useMemo, useCallback) to prevent unnecessary rerenders.",
-        "Integrated Context Api for predictable state handling (adding, removing, updating items).",
-        "Built with Tailwind CSS grid & flex utilities; tested across devices.",
-        "Implemented React Query for caching, refetching and managing server state."
+        "Implemented debounced search and memoization to minimize re-renders and network traffic.",
+        "Integrated React Query for server-state caching and Context API for client state.",
+        "Created a multi-stage Dockerfile (Node.js Alpine build -> Nginx Alpine runtime) and deployed to Amazon EC2 via ECR."
       ],
+      "demos": {
+        "salesEngineer": {
+          "title": "Sales Engineer Demo",
+          "focus": "Customer problem, discovery, user needs, product walkthrough, solution value, and technical-to-business communication.",
+          "url": "https://youtu.be/zohJeGustHY"
+        },
+        "solutionEngineer": {
+          "title": "Solutions Engineer Demo",
+          "focus": "Solution architecture, TheMealDB REST API integration, React Query, debounced search, Context API, Docker, Linux (Ubuntu), Amazon ECR, Amazon EC2, Nginx, deployment workflow, and technical troubleshooting.",
+          "url": "https://youtu.be/CV_Lsmo98II"
+        }
+      },
       "liveUrl": "https://recipe-finder-kappa-taupe.vercel.app/",
-      "githubUrl": "https://github.com/PECULIAR-AMY/Alx-capstone-project/blob/main/README.md#alx-capstone-project"
+      "githubUrl": "https://github.com/PECULIAR-AMY/Alx-capstone-project"
     }
   ],
   "skills": {

@@ -39,13 +39,13 @@ const Contact = () => {
     {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/PECULIAR-AMY",
       color: "hover:text-foreground",
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/chiamaka-igbokwe/",
       color: "hover:text-blue-600",
     },
     {
@@ -62,12 +62,10 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-10 animate-fade-in">
           <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold mb-4 md:mb-6">
-            Get In <span className="gradient-text">Touch</span>
+            Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-[15px] sm:text-[17px] text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ready to work together? I'd love to hear about your project and
-            discuss how I can help bring your ideas to life. Let's create
-            something amazing!
+            Interested in discussing a technical solution, product opportunity, or engineering role? I'd be glad to connect.
           </p>
         </div>
 
@@ -75,7 +73,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8 animate-fade-in">
             <div className="card-elegant p-6">
-              <h3 className="text-xl font-semibold mb-6">Let's Connect</h3>
+              <h3 className="text-xl font-semibold mb-6">Contact Info</h3>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -96,7 +94,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-sm text-muted-foreground">, Nigeria</p>
+                    <p className="text-sm text-muted-foreground">Abuja, Nigeria</p>
                   </div>
                 </div>
               </div>
@@ -110,6 +108,7 @@ const Contact = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={link.label}
                       className={`w-10 h-10 bg-card border border-border/50 rounded-lg flex items-center justify-center text-muted-foreground transition-all duration-300 hover:scale-110 hover:shadow-md ${link.color}`}
                     >
                       {link.icon}
@@ -119,14 +118,13 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Quick Response */}
+            {/* Availability */}
             <div className="card-elegant p-6 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
               <h4 className="font-semibold mb-2 text-primary">
-                Quick Response Guarantee
+                Professional Availability
               </h4>
               <p className="text-sm text-muted-foreground">
-                I typically respond to all inquiries within 24 hours. For urgent
-                projects, don't hesitate to mention it in your message!
+                I typically respond to inquiries within 24 hours. Feel free to reach out via email or LinkedIn.
               </p>
             </div>
           </div>

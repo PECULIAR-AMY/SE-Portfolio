@@ -3,56 +3,68 @@
     "id": "ai-travel-assistant",
     "title": "AI Travel Assistant",
     "subtitle": "AI-Powered Travel Recommendation & Booking Solution",
-    "category": "Customer-facing solution | AI | APIs | Payments | Recommendation Engine",
+    "category": "AI Integration | API Integration | Solution Architecture | Payment Workflows | Technical Problem-Solving",
     "image": "/images/Project1.png",
-    "customerProblem": "Travelers often need to compare destinations, hotels, flights and activities across multiple sources while staying within a specific budget. This creates a fragmented discovery and decision-making experience.\n\nThe objective was to create a solution that could understand customer preferences, budget constraints and travel requirements and turn them into relevant travel recommendations.",
-    "solution": "I designed and developed an AI-powered travel assistant that collects customer requirements and provides personalized travel recommendations based on budget, destination preferences and travel interests.\n\nThe solution combines an AI service with application APIs and a payment workflow to demonstrate how multiple technical capabilities can work together within a customer-facing product.",
+    "customerProblem": "Travelers planning trips often need to compare destinations, flights, hotels, and activities across multiple disjointed sources while trying to stay within a specific budget. This creates a fragmented decision-making experience. The AI Travel Assistant provides a unified interface where users can organize travel preferences, receive recommendations aligned with their budget, and test a streamlined checkout workflow.",
+    "solution": "The AI Travel Assistant is a travel-planning application designed to help users explore travel options based on their preferences and budget. It integrates an AI chat experience, travel recommendation workflows, and a Paystack test payment flow into a single customer-facing solution.",
     "solutionArchitecture": {
-      "diagram": "Customer → React Application → Application/Proxy Layer → External APIs & AI Service → Recommendation Response",
-      "description": "The architecture separates the customer-facing application from external service integrations, allowing API credentials and service communication to be handled more securely."
+      "diagram": "Customer → React Application → Application/Proxy Layer → AI Service / External APIs → Recommendation Response (Mock Data)\nCustomer → React Application → Paystack Test Environment → Transaction Response (Test Mode)",
+      "description": "Decoupled architecture separating recommendation service integrations and Paystack test payment checkout flows."
     },
     "technicalImplementation": [
       "React",
       "TypeScript",
-      "OpenAI API",
-      "REST API integration",
-      "API request handling",
-      "Proxy server",
-      "Paystack payment integration",
       "Tailwind CSS",
-      "Caching",
-      "Responsive UI",
-      "Secure handling of API credentials"
+      "Vite",
+      "AI Integration",
+      "API Integration",
+      "Paystack"
     ],
-    "challenges": "The main challenges involved integrating an AI service reliably, protecting API credentials, improving the consistency of AI-generated recommendations and connecting the application to a payment workflow.",
+    "challenges": "Managing AI chat stateful interactions, delegating API communication through server proxy environment variables, structuring mock recommendation schemas, and validating Paystack test payment callbacks.",
     "solutionApproach": [
-      "I introduced a proxy layer between the frontend and external services so sensitive API credentials were not exposed directly in the browser.",
-      "I also refined the prompts used by the AI service, tested different customer scenarios and iterated on the recommendation flow to improve the relevance of the responses.",
-      "For the payment workflow, I integrated Paystack's test environment and validated different transaction scenarios before connecting the payment experience to the application flow."
+      "AI Chat Integration with structured conversational prompts",
+      "Application/proxy layer for API credential delegation",
+      "Structured travel recommendation workflows (flights, hotels, tours)",
+      "Paystack test sandbox environment integration"
     ],
     "salesEngineeringSkills": [
-      "Customer Discovery",
-      "Requirements Gathering",
-      "Technical Qualification",
-      "Solution Design",
+      "Customer Requirements Gathering",
       "Solution Architecture",
-      "API Integration",
-      "Technical Problem Solving",
-      "Product Demonstration",
-      "Technical Communication"
+      "API Integration & Proxy Delegation",
+      "Conversational AI Integration",
+      "Payment Workflow Demonstration",
+      "Technical-to-Business Communication"
     ],
-    "businessValue": "The project demonstrates how customer requirements can be translated into a technical solution that combines AI, APIs, third-party integrations and payments into a single customer experience.\n\nIt also demonstrates my ability to explain technical architecture and integration decisions in terms of their impact on the customer experience.",
-    "liveUrl": "https://youtu.be/XbCb4qiRnBk",
-    "githubUrl": "https://github.com/PECULIAR-AMY/AI-Travel-Assistant-"
+    "businessValue": "Organizes travel preferences in one interface · Supports budget-conscious planning · Demonstrates AI decision workflows · Combines recommendations and payment test flow",
+    "githubUrl": "https://github.com/PECULIAR-AMY/AI-Travel-Assistant-",
+    "demos": [
+      {
+        "id": "demo-video",
+        "role": "Demo Video",
+        "badge": "Product Walkthrough · Customer Value · Technical Overview",
+        "title": "Demo Video",
+        "description": "A customer-facing product walkthrough focused on customer pain points, preference gathering, feature demonstration, and solution value communication.",
+        "keyHighlights": [
+          "Customer problem alignment",
+          "Preference gathering",
+          "AI chat walkthrough",
+          "Recommendation discovery",
+          "Paystack test checkout",
+          "Technical-to-business value"
+        ],
+        "demoUrl": "https://youtu.be/XbCb4qiRnBk",
+        "demoLabel": "Watch Demo Video"
+      }
+    ]
   },
   {
     "id": "recipe-finder",
     "title": "Recipe Finder",
-    "subtitle": "API-Driven Recipe Discovery Solution",
-    "category": "API integration | Search | Recommendation | Performance",
+    "subtitle": "API-Driven Recipe Discovery & Cloud Deployment Solution",
+    "category": "API Integration | Solution Design | Technical Architecture | Docker | AWS | Performance Optimization",
     "image": "/images/Project3.png",
-    "customerProblem": "Users looking for recipes need a fast way to search for meals, discover relevant options and access supporting cooking resources without navigating multiple sources.",
-    "solution": "I built an API-driven recipe discovery application that allows users to search for meals, receive relevant recipe results and access additional cooking resources.\n\nThe project focuses on integrating an external API into a responsive customer-facing application while managing application state and API requests efficiently.",
+    "customerProblem": "Users looking for recipes often need to navigate multiple sources to find relevant meals and supporting cooking resources. Recipe Finder provides a streamlined recipe discovery experience through a single customer-facing application.",
+    "solution": "Recipe Finder is a responsive API-driven application that integrates TheMealDB REST API to retrieve and display recipe information.",
     "technicalImplementation": [
       "React",
       "TypeScript",
@@ -62,12 +74,21 @@
       "Vite",
       "Tailwind CSS",
       "REST API integration",
+      "Docker",
+      "Nginx",
+      "AWS ECR",
+      "AWS EC2",
+      "Linux (Ubuntu)",
       "Client-side caching"
     ],
-    "challenges": "The application needed to handle frequent search input and API requests without creating unnecessary network calls or component re-renders. Other requirements included predictable state management, responsive design and reliable API data handling.",
+    "challenges": "Technical problem solving across application behavior, Docker containers, Linux (Ubuntu) / SSH, AWS configuration and deployment workflow.",
     "solutionApproach": [
-      "I implemented debounced search to reduce unnecessary API requests and used memoization to minimize avoidable component re-renders.",
-      "React Query was used for server-state management, caching and refetching, while Context API provided predictable application state management."
+      "React + TypeScript frontend development",
+      "TheMealDB REST API integration for recipe data",
+      "React Query for server-state management, caching and refetching",
+      "Context API for shared application state",
+      "Debounced search to reduce unnecessary API requests",
+      "Memoization where appropriate"
     ],
     "salesEngineeringSkills": [
       "API Integration",
@@ -76,10 +97,54 @@
       "Technical Troubleshooting",
       "Solution Design",
       "Performance Optimization",
+      "Docker & Containerization",
+      "Cloud Deployment Workflow",
       "Technical Communication"
     ],
-    "businessValue": "The project demonstrates my ability to evaluate a technical requirement, select appropriate implementation approaches, integrate third-party APIs, troubleshoot technical issues and improve the customer experience through performance optimization.",
-    "liveUrl": "https://youtu.be/71q-KZjl5Pg",
-    "githubUrl": "https://github.com/PECULIAR-AMY/Alx-capstone-project/blob/main/README.md#alx-capstone-project"
+    "businessValue": "Simplifies recipe discovery · Provides a streamlined customer experience · Uses API integration effectively · Applies performance-conscious implementation · Demonstrates a path from application development to cloud deployment",
+    "liveUrl": "https://recipe-finder-kappa-taupe.vercel.app/",
+    "githubUrl": "https://github.com/PECULIAR-AMY/Alx-capstone-project",
+    "demos": [
+      {
+        "id": "sales-engineer-demo",
+        "role": "Sales Engineer Demo",
+        "badge": "Customer Discovery · Product Demonstration · Business Value",
+        "title": "Sales Engineer Demo",
+        "description": "A customer-facing walkthrough focused on the customer problem, user needs, product experience, solution value and high-level technical explanation.",
+        "keyHighlights": [
+          "Customer problem",
+          "Discovery",
+          "User needs",
+          "Product walkthrough",
+          "Solution value",
+          "Technical-to-business communication"
+        ],
+        "demoUrl": "https://youtu.be/zohJeGustHY",
+        "demoLabel": "Watch Sales Engineer Demo"
+      },
+      {
+        "id": "solution-engineer-demo",
+        "role": "Solutions Engineer Demo",
+        "badge": "Technical Architecture · Implementation · Cloud Deployment",
+        "title": "Solutions Engineer Demo",
+        "description": "A technical walkthrough focused on how the solution works, the architecture, implementation decisions, containerization and AWS deployment workflow.",
+        "keyHighlights": [
+          "Solution architecture",
+          "TheMealDB REST API integration",
+          "React Query",
+          "Debounced search",
+          "Context API",
+          "Docker",
+          "Linux (Ubuntu)",
+          "Amazon ECR",
+          "Amazon EC2",
+          "Nginx",
+          "Deployment workflow",
+          "Technical troubleshooting"
+        ],
+        "demoUrl": "https://youtu.be/CV_Lsmo98II",
+        "demoLabel": "Watch Solutions Engineer Demo"
+      }
+    ]
   }
 ]

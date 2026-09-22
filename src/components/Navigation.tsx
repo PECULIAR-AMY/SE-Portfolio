@@ -33,10 +33,9 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="font-bold text-xl gradient-text">
-            Portfolio
-          </div>
+          <a href="#" className="font-bold text-xl gradient-text">
+            SE Portfolio
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

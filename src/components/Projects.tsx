@@ -8,8 +8,48 @@ import {
   Award,
   TrendingUp,
   Target,
+  Briefcase,
+  Code,
+  CheckCircle2,
+  PlayCircle,
+  Monitor,
 } from "lucide-react";
+import { RecipeFinderProject } from "./RecipeFinderProject";
+import { AiTravelAssistantProject } from "./AiTravelAssistantProject";
 import projects from "../data/projects.json";
+
+interface DemoItem {
+  id: string;
+  role: string;
+  badge: string;
+  title: string;
+  description: string;
+  keyHighlights?: string[];
+  demoUrl: string;
+  demoLabel?: string;
+}
+
+interface ProjectItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  category: string;
+  image: string;
+  customerProblem: string;
+  solution: string;
+  solutionArchitecture?: {
+    diagram: string;
+    description: string;
+  };
+  technicalImplementation: string[];
+  challenges: string;
+  solutionApproach: string[];
+  salesEngineeringSkills?: string[];
+  businessValue: string;
+  liveUrl: string;
+  githubUrl?: string;
+  demos?: DemoItem[];
+}
 
 const Projects = () => {
   return (
@@ -18,37 +58,38 @@ const Projects = () => {
         {/* Header */}
         <div className="mb-8 md:mb-10 animate-fade-in text-left">
           <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold mb-4 md:mb-6">
-            Featured <span className="gradient-text">Solutions and Demo</span> 
+            Featured <span className="gradient-text">Solutions & Demos</span>
           </h2>
           <div className="text-[15px] sm:text-[17px] text-muted-foreground max-w-3xl leading-relaxed space-y-3 sm:space-y-4">
             <p>
-              I build customer-focused software solutions by connecting{" "}
+              I build and demonstrate technical solutions that connect{" "}
               <strong className="text-foreground font-semibold">
-                business requirements, technical requirements, solution architecture,
-                integrations and measurable outcomes
+                customer needs, business requirements and technical implementation
               </strong>
-              .
-            </p>
-            <p>
-              My projects demonstrate experience with{" "}
+              . My projects demonstrate experience with{" "}
               <strong className="text-foreground font-semibold">
-                requirements gathering, solution design, API integrations, technical
-                problem-solving, product demonstrations, technical communication and
-                translating technical capabilities into practical customer value
-              </strong>
-              .
+                requirements analysis, solution design, API integrations, technical architecture, problem-solving, product demonstrations and technical communication
+              </strong>{" "}
+              with a focus on showing how technology can address practical customer needs.
             </p>
           </div>
         </div>
 
         {/* Projects List */}
         <div className="space-y-10 md:space-y-12">
-          {projects.map((project, index) => (
-            <div
-              key={project.id || index}
-              className="card-elegant p-5 sm:p-8 lg:p-10 space-y-6 sm:space-y-8 animate-fade-in-delay"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
+          {(projects as ProjectItem[]).map((project, index) => {
+            if (project.id === "recipe-finder") {
+              return <RecipeFinderProject key={project.id} project={project} index={index} />;
+            }
+            if (project.id === "ai-travel-assistant") {
+              return <AiTravelAssistantProject key={project.id} project={project} index={index} />;
+            }
+            return (
+              <div
+                key={project.id || index}
+                className="card-elegant p-5 sm:p-8 lg:p-10 space-y-6 sm:space-y-8 animate-fade-in-delay"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
               {/* Top Header & Category */}
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-border/50 pb-6">
                 <div>
@@ -223,8 +264,118 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Dual Demo Perspectives Section */}
+              {project.demos && project.demos.length > 0 && (
+                <div className="mt-8 border-t border-border/60 pt-8 space-y-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                      <h4 className="text-[22px] font-bold text-foreground flex items-center gap-2">
+                        <Monitor className="h-5 w-5 text-primary" />
+                        Interactive Demo Perspectives
+                      </h4>
+                      <p className="text-[15px] text-muted-foreground">
+                        Explore this solution through two distinct engineering lenses
+                      </p>
+                    </div>
+                    <div className="flex gap-2 bg-secondary/60 p-1.5 rounded-xl border border-border/50 self-start sm:self-auto">
+                      <span className="text-xs font-semibold px-3 py-1 bg-primary/20 text-primary rounded-lg border border-primary/30">
+                        Sales & Solution Demos Included
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {project.demos.map((demo) => {
+                      const isSales = demo.id.includes("sales");
+                      return (
+                        <div
+                          key={demo.id}
+                          className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-lg flex flex-col justify-between space-y-5 ${
+                            isSales
+                              ? "bg-gradient-to-br from-primary/5 via-secondary/30 to-background border-primary/30 hover:border-primary/60"
+                              : "bg-gradient-to-br from-accent/5 via-secondary/30 to-background border-accent/30 hover:border-accent/60"
+                          }`}
+                        >
+                          <div className="space-y-3.5">
+                            <div className="flex items-center justify-between gap-2 flex-wrap">
+                              <span
+                                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
+                                  isSales
+                                    ? "bg-primary/15 text-primary border border-primary/30"
+                                    : "bg-accent/15 text-accent border border-accent/30"
+                                }`}
+                              >
+                                {isSales ? (
+                                  <Briefcase className="h-3.5 w-3.5" />
+                                ) : (
+                                  <Code className="h-3.5 w-3.5" />
+                                )}
+                                {demo.role}
+                              </span>
+                              <span className="text-xs font-medium text-muted-foreground bg-background/80 px-2.5 py-0.5 rounded-md border border-border/50">
+                                {demo.badge}
+                              </span>
+                            </div>
+
+                            <h5 className="text-[18px] font-bold text-foreground leading-snug">
+                              {demo.title}
+                            </h5>
+
+                            <p className="text-[15px] text-muted-foreground leading-relaxed">
+                              {demo.description}
+                            </p>
+
+                            {demo.keyHighlights && (
+                              <div className="space-y-2 pt-2">
+                                <span className="text-xs font-semibold uppercase tracking-wider text-foreground/80">
+                                  Key Demo Focus:
+                                </span>
+                                <ul className="space-y-1.5 text-xs text-muted-foreground">
+                                  {demo.keyHighlights.map((highlight: string, hIdx: number) => (
+                                    <li key={hIdx} className="flex items-start gap-2">
+                                      <CheckCircle2
+                                        className={`h-3.5 w-3.5 mt-0.5 flex-shrink-0 ${
+                                          isSales ? "text-primary" : "text-accent"
+                                        }`}
+                                      />
+                                      <span>{highlight}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="pt-4 border-t border-border/40">
+                            <a
+                              href={demo.demoUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block"
+                            >
+                              <Button
+                                variant={isSales ? "hero" : "elegant"}
+                                className="w-full gap-2 text-xs font-semibold py-2.5"
+                              >
+                                {isSales ? (
+                                  <PlayCircle className="h-4 w-4" />
+                                ) : (
+                                  <ExternalLink className="h-4 w-4" />
+                                )}
+                                {demo.demoLabel || "View Demo"}
+                              </Button>
+                            </a>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

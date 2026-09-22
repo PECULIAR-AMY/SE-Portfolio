@@ -3,32 +3,32 @@
     {
       "icon": "Code2",
       "title": "Software Engineering",
-      "description": "React, TypeScript, Next.js, Node.js, JavaScript,Express, Postgres, supabase, Mysql, Prisma, AI integration"
+      "description": "React, TypeScript, Next.js, Node.js, JavaScript, Express, PostgreSQL, Supabase, MySQL, Prisma, AI Integration."
     },
     {
       "icon": "PlugZap",
-      "title": "Api & integrations",
+      "title": "API & Integrations",
       "description": "REST APIs, JSON, Authentication, OAuth, Webhooks."
     },
     {
       "icon": "Workflow",
-      "title": "Solution design",
+      "title": "Solution Design",
       "description": "Requirements Gathering, Solution Architecture, Technical Problem Solving."
     },
     {
       "icon": "ShieldCheck",
-      "title": "Security and performance",
+      "title": "Security & Performance",
       "description": "Web Security, Authentication, Performance Optimization, Accessibility."
     },
     {
       "icon": "Handshake",
-      "title": "Sales and customer engagement",
+      "title": "Sales & Customer Engagement",
       "description": "Customer Discovery, Technical Communication, Product Demonstrations, Stakeholder Communication."
     },
     {
       "icon": "UsersRound",
       "title": "CRM",
-      "description": "Hubspot."
+      "description": "HubSpot."
     },
     {
       "icon": "Wrench",
