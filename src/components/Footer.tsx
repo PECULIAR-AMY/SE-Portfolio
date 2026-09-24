@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Connect</h4>
             <div className="space-y-2">
-              <p className="text-background/70">emmanuelpeculiar645@gmail.com</p>
+              <p className="text-background/70">chiamakaigbokwex@gmail.com</p>
               <p className="text-background/70">Abuja, Nigeria</p>
             </div>
             <div className="flex gap-4 pt-2">
@@ -57,7 +57,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:emmanuelpeculiar645@gmail.com"
+                href="mailto:chiamakaigbokwex@gmail.com"
                 className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center text-background/70 hover:text-background hover:bg-background/20 transition-all duration-300"
               >
                 <Mail className="h-5 w-5" />

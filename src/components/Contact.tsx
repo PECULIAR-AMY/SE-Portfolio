@@ -51,7 +51,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
-      href: "mailto:emmanuelpeculiar645@gmail.com",
+      href: "mailto:chiamakaigbokwex@gmail.com",
       color: "hover:text-primary",
     },
   ];
@@ -83,7 +83,7 @@ const Contact = () => {
                   <div>
                     <p className="font-medium">Email</p>
                     <p className="text-sm text-muted-foreground">
-                      emmanuelpeculiar645@gmail.com
+                      chiamakaigbokwex@gmail.com
                     </p>
                   </div>
                 </div>

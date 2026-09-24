@@ -94,7 +94,7 @@ const AIChatbot = () => {
     }
 
     if (message.includes("contact") || message.includes("hire") || message.includes("work together")) {
-      return "I'm always interested in exciting new opportunities! You can reach me at emmanuelpeculiar645@gmail.com or connect with me on LinkedIn. I'd love to discuss how I can contribute to your team or project.";
+      return "I'm always interested in exciting new opportunities! You can reach me at chiamakaigbokwex@gmail.com or connect with me on LinkedIn. I'd love to discuss how I can contribute to your team or project.";
     }
 
     if (message.includes("ai") || message.includes("artificial intelligence")) {
