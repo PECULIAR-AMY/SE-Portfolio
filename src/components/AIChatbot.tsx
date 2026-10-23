@@ -77,6 +77,13 @@ const AIChatbot = () => {
       }
     }
 
+    if (message.includes("pipeline")) {
+      const project = chatbotKnowledge.projects.find(p => p.title.toLowerCase().includes("pipeline"));
+      if (project) {
+        return `About ${project.title}: ${project.description}\nTechnologies: ${project.technologies.join(', ')}\nChallenges: ${project.challenges.join(' ')}\nSolutions: ${project.solutions.join(' ')}\nGitHub: ${project.githubUrl}`;
+      }
+    }
+
     if (message.includes("location") || message.includes("where")) {
       return chatbotKnowledge.aboutMe.location + " I enjoy the tech scene in Lagos but I'm also experienced with remote collaboration.";
     }

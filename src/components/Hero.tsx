@@ -31,13 +31,13 @@ const Hero = () => {
                 Get In Touch
               </Button>
               <Button variant="elegant" size="lg" className="hover-lift" asChild>
-                <a href="/public/Chiamaka_Peculiar_Sales_Engineer_CV_Updated.pdf" download className="flex items-center gap-2">
+                <a href="/public/Chiamaka_Peculiar_Sales_Engineer_CV_Updated new (4) (2).pdf" download className="flex items-center gap-2">
                   <Download className="h-4 w-4" />
                   Sales Engineer CV
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="hover-lift" asChild>
-                <a href="/public/Chiamaka_Peculiar_Solutions_Engineer_CV_Updated.pdf" download className="flex items-center gap-2">
+                <a href="/public/" download className="flex items-center gap-2">
                   <Download className="h-4 w-4" />
                   Solutions Engineer CV
                 </a>

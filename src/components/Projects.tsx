@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { RecipeFinderProject } from "./RecipeFinderProject";
 import { AiTravelAssistantProject } from "./AiTravelAssistantProject";
+import { PipelineLabProject } from "./PipelineLabProject";
 import projects from "../data/projects.json";
 
 interface DemoItem {
@@ -83,6 +84,9 @@ const Projects = () => {
             }
             if (project.id === "ai-travel-assistant") {
               return <AiTravelAssistantProject key={project.id} project={project} index={index} />;
+            }
+            if (project.id === "pipeline-lab") {
+              return <PipelineLabProject key={project.id} project={project} index={index} />;
             }
             return (
               <div

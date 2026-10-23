@@ -1,5 +1,89 @@
 [
   {
+    "id": "pipeline-lab",
+    "title": "Pipeline Lab",
+    "subtitle": "Technical Discovery & Lead Qualification Platform",
+    "category": "API Integration | Technical Discovery | Solutions Engineering | Lead Qualification | Solution Analysis",
+    "image": "/images/pipeline-lab.png",
+    "customerProblem": "Sales Engineers, Solutions Architects, and Account Executives often walk into discovery and qualification calls without verified technical insight into a prospect's infrastructure, edge architecture, rate-limiting, and security posture. Manually running ad-hoc curl commands or deciphering raw HTTP headers during calls is slow and error-prone, while running intrusive scanners risks compliance issues. Commercial teams need a fast, non-intrusive way to evaluate observable attack surfaces and delivery hygiene, convert findings into business risks, and produce standardized CRM handoff notes before prospect calls.",
+    "solution": "A technical discovery and lead qualification tool that turns publicly observable website and API findings into evidence-based business insights and sales handoff notes. Built on TanStack Start and Nitro with React 19, the solution conducts non-intrusive server-side evaluations bounded to a strict 6-request budget, isolates requests from client CORS/IP exposure, calculates normalized 0–100 lead scores, and translates technical telemetry into commercial sales talking points.",
+    "solutionArchitecture": {
+      "diagram": "Commercial User (Browser) → TanStack Start SSR → Nitro Server Function (runScan) → Target Domain / API Gateway (Passive 1–6 Requests) → Intelligence Pipeline (Scoring & Persona Heuristics) → AE Handoff Note & Executive Summary",
+      "description": "Decoupled full-stack architecture running passive diagnostic scans server-side with strict 12s AbortController timeouts, preventing browser CORS friction and client IP disclosure."
+    },
+    "technicalImplementation": [
+      "TanStack Start",
+      "React 19",
+      "TypeScript",
+      "Nitro",
+      "Tailwind CSS v4",
+      "TanStack Query",
+      "TanStack Router",
+      "Radix UI",
+      "Server Functions (createServerFn)",
+      "HTTP Telemetry & Header Inspection",
+      "Zod",
+      "Vite"
+    ],
+    "challenges": "Executing non-intrusive target diagnostics without triggering browser CORS blocks, eliminating client IP exposure, enforcing strict request budgets and timeout boundaries, and translating low-level HTTP headers into high-impact commercial sales narratives.",
+    "solutionApproach": [
+      "Server-side scan execution via TanStack Start createServerFn to bypass browser CORS and insulate client IP",
+      "Strict passive crawling discipline: max 1 GET for frontends, max 6 requests for APIs, with 12s timeout guards",
+      "Transparent 0–100 scoring algorithm evaluating TTFB, edge CDN presence, transport security, and rate limiting",
+      "Automated buyer persona classification heuristics (Frontend Eng vs Backend API teams) from response signatures",
+      "Synthesis of raw HTTP telemetry into structured AE CRM handoff notes and sales talking points"
+    ],
+    "salesEngineeringSkills": [
+      "Technical Discovery",
+      "Presales Lead Qualification",
+      "API & HTTP Header Analysis",
+      "Solution Architecture",
+      "Buyer Persona Mapping",
+      "Commercial-to-Technical Translation",
+      "Security & Edge Infrastructure Evaluation",
+      "Deal Enablement & CRM Handoff"
+    ],
+    "businessValue": "Accelerates presales technical discovery · Replaces manual curl inspection with quantitative 0–100 scoring · Armors Account Executives with evidence-based talking points · Identifies infrastructure modernization opportunities before discovery calls · Standardizes deal notes for seamless sales handoff",
+    "githubUrl": "https://github.com/PECULIAR-AMY/Pipeline-Lab",
+    "liveUrl": "",
+    "demos": [
+      {
+        "id": "sales-engineer-demo",
+        "role": "Sales Engineer Demo",
+        "badge": "Technical Discovery · Lead Qualification · Business Value",
+        "title": "Sales Engineer Demo",
+        "description": "A customer-facing walkthrough focused on presales discovery, diagnosing web and API infrastructure modernness, persona routing, and presenting evidence-based commercial deal insights.",
+        "keyHighlights": [
+          "Presales discovery alignment",
+          "Passive telemetry inspection",
+          "Lead qualification scoring (0-100)",
+          "Buyer persona auto-routing",
+          "CRM handoff note synthesis",
+          "Technical-to-business value translation"
+        ],
+        "demoUrl": "https://www.loom.com/share/3e0d76df13ca4dbe9fa33e90a1b933d0",
+        "demoLabel": "Watch Sales Engineer Demo"
+      },
+      {
+        "id": "solution-engineer-demo",
+        "role": "Solutions Engineer Demo",
+        "badge": "Full-Stack Architecture · SSR Runtime · Diagnostic Engine",
+        "title": "Solutions Engineer Demo",
+        "description": "A technical walkthrough focused on TanStack Start server functions, Nitro server engine, passive request budgeting, CORS/IP isolation, and diagnostic scoring algorithms.",
+        "keyHighlights": [
+          "TanStack Start & Nitro SSR",
+          "Server function runScan",
+          "CORS & client IP isolation",
+          "Passive request budget (max 6 reqs)",
+          "12s AbortController timeout guards",
+          "Diagnostic scoring & persona classification"
+        ],
+        "demoUrl": "https://youtu.be/CV_Lsmo98II",
+        "demoLabel": "Watch Solutions Engineer Demo"
+      }
+    ]
+  },
+  {
     "id": "ai-travel-assistant",
     "title": "AI Travel Assistant",
     "subtitle": "AI-Powered Travel Recommendation & Booking Solution",
@@ -65,52 +149,48 @@
     "image": "/images/Project3.png",
     "customerProblem": "Users looking for recipes often need to navigate multiple sources to find relevant meals and supporting cooking resources. Recipe Finder provides a streamlined recipe discovery experience through a single customer-facing application.",
     "solution": "Recipe Finder is a responsive API-driven application that integrates TheMealDB REST API to retrieve and display recipe information.",
+    "solutionArchitecture": {
+      "diagram": "Frontend Layer (React/TypeScript UI) → Client-Side Query Handling (TheMealDB REST API) → Dynamic Meal Search, Filtering, and Instructions Display\nDeployment Flow: Local Codebase → Multi-Stage Docker Build → Container Image Tagging → Amazon ECR Registry → Amazon EC2 Deployment",
+      "description": "API-driven architecture containerized with Docker and deployed to AWS EC2 via Amazon ECR, demonstrating both frontend integration and cloud infrastructure delivery."
+    },
     "technicalImplementation": [
       "React",
       "TypeScript",
       "TheMealDB API",
       "React Query",
       "Context API",
-      "Vite",
-      "Tailwind CSS",
-      "REST API integration",
       "Docker",
       "Nginx",
       "AWS ECR",
       "AWS EC2",
-      "Linux (Ubuntu)",
-      "Client-side caching"
+      "Linux (Ubuntu)"
     ],
-    "challenges": "Technical problem solving across application behavior, Docker containers, Linux (Ubuntu) / SSH, AWS configuration and deployment workflow.",
+    "challenges": "Handling frequent search input and API request optimization without unnecessary network calls or component re-renders.",
     "solutionApproach": [
-      "React + TypeScript frontend development",
-      "TheMealDB REST API integration for recipe data",
-      "React Query for server-state management, caching and refetching",
-      "Context API for shared application state",
-      "Debounced search to reduce unnecessary API requests",
-      "Memoization where appropriate"
+      "API request throttling and caching strategy to reduce redundant network operations",
+      "Component-level state separation to minimize re-render cycles during search updates",
+      "Containerizing application into lightweight multi-stage Docker image with Nginx serving static assets",
+      "Configuring Amazon ECR repository and setting up authentication token for image push/pull workflows",
+      "Provisioning Amazon EC2 Linux instance and executing container runtime deployment"
     ],
     "salesEngineeringSkills": [
-      "API Integration",
-      "Requirements Analysis",
-      "Technical Problem Solving",
-      "Technical Troubleshooting",
-      "Solution Design",
-      "Performance Optimization",
-      "Docker & Containerization",
-      "Cloud Deployment Workflow",
-      "Technical Communication"
+      "API Integration & Testing",
+      "Technical Discovery",
+      "Architecture Communication",
+      "Cloud Deployment Demonstration",
+      "Proof-of-Concept Execution",
+      "Technical-to-Business Value Translation"
     ],
-    "businessValue": "Simplifies recipe discovery · Provides a streamlined customer experience · Uses API integration effectively · Applies performance-conscious implementation · Demonstrates a path from application development to cloud deployment",
+    "businessValue": "Streamlined recipe discovery experience · Responsive performance through query caching · Production-ready containerized deployment on AWS · Clear technical documentation for customer-facing handoff",
     "liveUrl": "https://recipe-finder-kappa-taupe.vercel.app/",
     "githubUrl": "https://github.com/PECULIAR-AMY/Alx-capstone-project",
     "demos": [
       {
         "id": "sales-engineer-demo",
         "role": "Sales Engineer Demo",
-        "badge": "Customer Discovery · Product Demonstration · Business Value",
+        "badge": "Product Walkthrough · Value Proposition · Business Outcomes",
         "title": "Sales Engineer Demo",
-        "description": "A customer-facing walkthrough focused on the customer problem, user needs, product experience, solution value and high-level technical explanation.",
+        "description": "A customer-facing walkthrough focused on how the application solves user needs, demonstrates value, and communicates the business benefits of the solution.",
         "keyHighlights": [
           "Customer problem",
           "Discovery",
@@ -129,18 +209,12 @@
         "title": "Solutions Engineer Demo",
         "description": "A technical walkthrough focused on how the solution works, the architecture, implementation decisions, containerization and AWS deployment workflow.",
         "keyHighlights": [
-          "Solution architecture",
-          "TheMealDB REST API integration",
-          "React Query",
-          "Debounced search",
-          "Context API",
-          "Docker",
-          "Linux (Ubuntu)",
-          "Amazon ECR",
-          "Amazon EC2",
-          "Nginx",
-          "Deployment workflow",
-          "Technical troubleshooting"
+          "Technical architecture",
+          "API integration",
+          "Docker containerization",
+          "AWS ECR & EC2 deployment",
+          "Implementation decisions",
+          "Cloud deployment workflow"
         ],
         "demoUrl": "https://youtu.be/CV_Lsmo98II",
         "demoLabel": "Watch Solutions Engineer Demo"
